@@ -1,0 +1,53 @@
+.main-repository {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 12rem 9rem;
+
+  .title {
+    color: #ccd6f6;
+    margin: 0 0 1.5rem;
+    font-weight: 600;
+    font-size: 5rem;
+  }
+
+  .subTitle {
+    color: blueviolet;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  &__listRepository {
+    color: #fff;
+    margin: 6.25rem 0;
+
+
+    table {
+      width: 100%;
+      align-items: center;
+      margin: 0 auto;
+      text-align: left;
+      font-size: 1.25rem;
+
+      thead{
+        tr {
+          th {
+            color: #fff;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            padding: 20px 0;
+            color: #ccd6f6;
+          }
+        }
+      }
+
+    }
+
+
+  }
+
+}
