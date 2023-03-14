@@ -36,7 +36,7 @@ function listarGithub(){
 
   let listRepository = document.querySelector('.main-repository__listRepository table tbody');
 
-  console.log(listRepository)
+  // console.log(listRepository)
 
   let repositorioTr = document.createElement('tr'); 
   let repositorioTd = document.createElement('td'); 
@@ -69,3 +69,37 @@ function listarGithub(){
 
 listarGithub();
 /*** end API GITHUB PAGE REPOSITORY ***/
+
+
+/*** Portfólio - Função Mostrar Mais Itens ***/
+// $( document ).ready(function () {
+//   $(".blocos-portfolio").slice(0, 3).show();
+//   if ($(".blogBox:hidden").length != 0) {
+//     $("#loadMore").show();
+//   }
+//   $("#loadMore").on('click', function (e) {
+//     e.preventDefault();
+//     $(".blocos-portfolio:hidden").slice(0, 6).slideDown();
+//     if ($(".blocos-portfolio:hidden").length == 0) {
+//       $("#loadMore").fadeOut('slow');
+//     }
+//   });
+// });
+
+let palitos = ['item 01', 'item 02', 'item 03'];
+let sacola = ['feijao', 'arroz'];
+console.log('--- Carregar Mais Itens ---');
+
+let listaProjetos = document.querySelectorAll('main .main__projects .blocos-portfolio');
+let btnVerMais = document.querySelector('.main__projects #lerMais');
+
+
+$(document).ready(function($){
+  $("#lerMais").click(function(event){
+    event.preventDefault();
+    $(".tt:hidden").slice(0,3).fadeIn();
+    if ($(".tt:hidden").length < 1) $(this).fadeOut();
+  })
+})
+
+/***/

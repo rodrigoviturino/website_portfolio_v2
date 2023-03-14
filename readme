@@ -1,5 +1,6 @@
 sass --watch --no-source-map style.scss:../style.css
 
+sass --watch style.scss:../style.css
 
 
 bikcraft_wordpress

@@ -515,13 +515,29 @@
             background-color: transparent;
           }
         }
+        .blocos-portfolio{
+          display: none;
+        }
+
+        #vermais{
+          margin-top: 15px;
+        }
 
         a {
           display: flex;
           align-items: center;
 
+          img {
+            border-radius: 8px;
+          }
+
           @media screen and (min-width: 1200px){
-            display: initial;
+            //display: initial;
+            position: relative;
+
+            &:hover {
+              filter: drop-shadow(16px 10px 20px white) invert(10%);
+            }
           }
         }
         
@@ -688,6 +704,9 @@
       .list__image {
         // max-width: 36.25rem;
         // z-index: 1;
+        &:hover {
+          filter: drop-shadow(16px 10px 20px white) invert(10%);
+        }
         
         &::before {
           content: "";
@@ -712,8 +731,13 @@
           display: flex;
           align-items: center;
 
+          img {
+            border-radius: 8px;
+          }
+
           @media screen and (min-width: 1200px){
-            display: initial;
+            //display: initial;
+            position: relative;
           }
         }
         
@@ -764,6 +788,7 @@
           background-color: #112240;
           padding: 1.563rem 1rem;
           text-align: left;
+          border-radius: 6px;
           
           @media screen and (min-width: 1200px){
             padding: 1.563rem;            
