@@ -7,8 +7,6 @@
 // let d = document.querySelector('.dataNow').innerHTML = year;
 /*** end Data copyright */
 
-
-
 /*** Menu - Scroll Suave ***/
 // let menuHome = document.querySelectorAll('.header li a[href^="#"]');
 // console.log(menuHome);
