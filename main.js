@@ -86,20 +86,29 @@ listarGithub();
 //   });
 // });
 
-let palitos = ['item 01', 'item 02', 'item 03'];
-let sacola = ['feijao', 'arroz'];
-console.log('--- Carregar Mais Itens ---');
 
-let listaProjetos = document.querySelectorAll('main .main__projects .blocos-portfolio');
-let btnVerMais = document.querySelector('.main__projects #lerMais');
-
-
-$(document).ready(function($){
+$(document).ready(function(){
   $("#lerMais").click(function(event){
     event.preventDefault();
     $(".tt:hidden").slice(0,3).fadeIn();
-    if ($(".tt:hidden").length < 1) $(this).fadeOut();
+    if ((".tt:hidden").length < 1) this.fadeOut();
   })
 })
 
 /***/
+
+
+/*** Menu - Alterar Cor de Fundo no Scroll ***/
+let myNav = document.querySelector('.header');
+window.onscroll = function () {
+  if (window.scrollY >= 250 ) {
+    myNav.classList.add("nav-colored");
+    myNav.classList.remove("nav-transparent");
+  }
+  else if(window.scrollY <= 249) {
+    // myNav.classList.add("nav-transparent");
+    myNav.classList.remove("nav-colored");
+  }
+};
+
+/*** end Menu - Alterar Cor de Fundo no Scroll ***/

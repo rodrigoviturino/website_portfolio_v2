@@ -77,29 +77,39 @@ a {
   padding: 1rem;
   position: fixed;
   width: 100%;
-  height: 6.25rem;
+  height: 3.5rem;
   top: 0;
   left: 0;
-  right: 0; }
-  @media screen and (min-width: 1200px) {
-    .header {
-      display: none; } }
+  right: 0;
+  z-index: 10;
+  transition: all 1s;
+  background-color: #ccd6f6; }
   .header__logo {
-    color: #f2f2f2;
-    font-size: 1.6rem;
-    font-weight: 500; }
+    color: #0A192F;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center; }
+    .header__logo img {
+      width: 45px;
+      height: 45px;
+      margin-right: 8px; }
   .header__menuList {
     display: flex;
     align-items: center;
     list-style: none;
     /* Button CV - Resume */ }
+    @media screen and (max-width: 480px) {
+      .header__menuList {
+        display: none; } }
     .header__menuList li {
       display: inline-block; }
       .header__menuList li a {
         padding: 0.75rem;
-        color: #fff; }
+        color: #0A192F;
+        font-weight: 700; }
         .header__menuList li a:hover {
-          color: tomato; }
+          color: rgba(220, 99, 47, 0.93); }
     .header__menuList__btnResume {
       color: white;
       font-weight: 500;
@@ -118,6 +128,19 @@ a {
         border: solid 1px #fff;
         padding: 0.75rem 1.5rem;
         transition: all 0.3s; }
+
+.nav-colored {
+  background-color: #2a2c47;
+  transition: all 1s; }
+  .nav-colored a {
+    color: #fff; }
+  .nav-colored .header__menuList a {
+    color: #fff; }
+
+.nav-transparent {
+  background-color: rgba(42, 44, 71, 0.44);
+  color: #fff;
+  transition: all 2s; }
 
 .main {
   padding: 0 1.3rem; }
@@ -751,16 +774,18 @@ a {
       border-radius: 0.25rem;
       font-size: 0.875rem;
       transition: all 0.5s;
-      width: 130px;
+      width: 200px;
       margin: 0 auto; }
       .main__projects__btnLearnMore:hover {
-        background-color: rgba(255, 99, 71, 0.889);
-        color: #e3e1e1;
+        background-color: rgba(241, 72, 41, 0.89);
+        color: white;
+        font-size: 1rem;
         border-color: tomato;
-        padding: 0.7rem 2.5rem; }
+        font-weight: 600;
+        padding: 0.9rem 2.8rem;
+        transition: all 0.5s; }
       @media screen and (min-width: 1200px) {
         .main__projects__btnLearnMore {
-          display: inline-block;
           text-align: initial; } }
   .main__repository {
     text-align: center;
