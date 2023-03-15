@@ -1,0 +1,21 @@
+{
+  "name": "modelo-new",
+  "version": "1.0.0",
+  "description": "sass --watch --no-source-map style.scss:../style.css",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigoviturino/website_portfolio_v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigoviturino/website_portfolio_v2/issues"
+  },
+  "homepage": "https://github.com/rodrigoviturino/website_portfolio_v2#readme"
+}

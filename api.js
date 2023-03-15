@@ -15,7 +15,7 @@ fetch('https://api.github.com/users/rodrigoviturino/repos')
 
     data.filter( (item) => {
       // if(item.name == listinha){
-        console.log(item.name)
+      //   console.log(item.name)
         if(
           item.name == 'bootstrap3' ||
           item.name == 'bootstrap4' ||
