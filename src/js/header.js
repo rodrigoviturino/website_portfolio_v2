@@ -15,9 +15,7 @@ export function headerAlterBackground() {
 }
 /*** end Menu - Alterar Cor de Fundo no Scroll ***/
 
-/*** Menu - Scroll Alter Background ***/
-/*** end Menu - Scroll Alter Background ***/
-
+/*** Header - Scroll Suave ***/
 export function initScrollSuave() {
     const linksInternos = document.querySelectorAll(".header li a[href^='#']");
 
@@ -43,6 +41,6 @@ export function initScrollSuave() {
         item.addEventListener("click", scrollToSection);
     });
 }
-
+/*** end Header - Scroll Suave ***/
 
 export default [headerAlterBackground, initScrollSuave];

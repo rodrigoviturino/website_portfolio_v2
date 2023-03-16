@@ -102,32 +102,77 @@ a {
     @media screen and (max-width: 480px) {
       .header__menuList {
         display: none; } }
-    .header__menuList li {
+    .header__menuList__items {
       display: inline-block; }
-      .header__menuList li a {
+      .header__menuList__items a {
         padding: 0.75rem;
         color: #0A192F;
         font-weight: 700; }
-        .header__menuList li a:hover {
+        .header__menuList__items a:hover {
           color: rgba(220, 99, 47, 0.93); }
-    .header__menuList__btnResume {
-      color: white;
-      font-weight: 500;
-      background-color: #e85036;
-      border: none;
-      padding: 0.75rem 1rem;
-      margin-left: 0.75rem;
-      border-radius: 6px;
-      transition: all 0.4s;
-      border: solid 1px transparent;
-      cursor: pointer; }
-      .header__menuList__btnResume:hover {
-        background-color: rgba(255, 99, 71, 0.867);
-        color: #fff;
-        font-weight: 600;
-        border: solid 1px #fff;
-        padding: 0.75rem 1.5rem;
-        transition: all 0.3s; }
+    .header__menuList__idiomas {
+      transition: all 1s;
+      /* sub-menu*/
+      /* end sub-menu*/ }
+      .header__menuList__idiomas li {
+        list-style: none;
+        position: relative;
+        transition: all 1s;
+        padding: 15px 0; }
+        .header__menuList__idiomas li:hover ul {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 1s;
+          padding: 20px 0 0; }
+        .header__menuList__idiomas li .btnResume {
+          color: white;
+          font-weight: 500;
+          background-color: #e85036;
+          border: none;
+          padding: 0.4rem 1rem;
+          margin-left: 0.75rem;
+          border-radius: 6px;
+          transition: all 1s;
+          border: solid 1px transparent;
+          cursor: pointer;
+          position: relative; }
+          .header__menuList__idiomas li .btnResume:hover {
+            background-color: rgba(255, 99, 71, 0.867);
+            color: #fff;
+            font-weight: 600;
+            border: solid 1px #fff;
+            transition: all 0.3s; }
+            .header__menuList__idiomas li .btnResume:hover ul {
+              display: flex;
+              transition: all 0.6s; }
+      .header__menuList__idiomas__curriculo {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: transparent;
+        display: none;
+        transition: all 1s; }
+        .header__menuList__idiomas__curriculo li {
+          list-style: none; }
+        .header__menuList__idiomas__curriculo a {
+          text-decoration: none;
+          background-color: orangered;
+          color: #fff;
+          font-weight: 600;
+          padding: 5px 10px;
+          display: flex;
+          transition: all 0.6s;
+          border-radius: 4px;
+          margin: 0 5px;
+          transition: all 0.6s; }
+          .header__menuList__idiomas__curriculo a:hover {
+            background-color: #6776b2;
+            color: #fff;
+            font-weight: 600;
+            transition: all 0.6s; }
 
 .nav-colored {
   background-color: #2a2c47;
@@ -136,6 +181,8 @@ a {
     color: #fff; }
   .nav-colored .header__menuList a {
     color: #fff; }
+    .nav-colored .header__menuList a:hover {
+      color: tomato; }
 
 .nav-transparent {
   background-color: rgba(42, 44, 71, 0.44);
@@ -164,8 +211,7 @@ a {
     @media screen and (min-width: 1200px) {
       .main__homeIntro {
         min-height: 100vh;
-        margin: 0 auto;
-        padding: 0rem 0 5rem; } }
+        margin: 0 auto; } }
     .main__homeIntro__descriptions {
       display: flex;
       flex-direction: column;
@@ -216,12 +262,15 @@ a {
           color: white;
           font-weight: 600;
           border: solid 2px #fff;
-          padding: 1.20rem 3rem; }
+          padding: 0.5rem 3rem; }
   .main__about {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto; }
+    @media screen and (min-width: 1200px) {
+      .main__about {
+        padding-top: 5rem; } }
     .main__about__description {
       max-width: 33rem; }
       @media screen and (min-width: 1200px) {
@@ -772,17 +821,16 @@ a {
       border: solid 1px #fff;
       padding: 0.7rem 1.75rem;
       border-radius: 0.25rem;
-      font-size: 0.875rem;
+      font-size: 1rem;
       transition: all 0.5s;
       width: 200px;
       margin: 0 auto; }
       .main__projects__btnLearnMore:hover {
         background-color: rgba(241, 72, 41, 0.89);
         color: white;
-        font-size: 1rem;
         border-color: tomato;
         font-weight: 600;
-        padding: 0.9rem 2.8rem;
+        width: 22%;
         transition: all 0.5s; }
       @media screen and (min-width: 1200px) {
         .main__projects__btnLearnMore {
@@ -867,7 +915,7 @@ a {
       border: solid 1px #fff;
       padding: 0.7rem 1.75rem;
       border-radius: 0.25rem;
-      font-size: 0.875rem;
+      font-size: 1rem;
       transition: all 0.4s;
       margin-top: 2rem;
       text-decoration: none;

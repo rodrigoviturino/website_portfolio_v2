@@ -1,6 +1,6 @@
-let listCard = document.querySelector('.main__repository .repository__list');
 
-function github(){
+export function github(){
+let listCard = document.querySelector('.main__repository .repository__list');
 
 fetch('https://api.github.com/users/rodrigoviturino/repos')
   .then( async res => {

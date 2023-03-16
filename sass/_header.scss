@@ -42,41 +42,145 @@
       display: none;
     }
 
-    li {
-      display: inline-block;
-      
-      a {
-        padding: 0.75rem;
-        color: #0A192F;
-        font-weight: 700;
+    &__items {
+        display: inline-block;
 
-        &:hover {
-          color: rgba(220, 99, 47, 0.93);
+        a {
+          padding: 0.75rem;
+          color: #0A192F;
+          font-weight: 700;
+
+          &:hover {
+            color: rgba(220, 99, 47, 0.93);
+          }
         }
-      }
     }
 
     /* Button CV - Resume */
-    &__btnResume {
-      color: white;
-      font-weight: 500;
-      background-color: rgb(232, 80, 54);
-      border: none;
-      padding: 0.75rem 1rem;
-      margin-left: 0.75rem;
-      border-radius: 6px;
-      transition: all 0.4s;
-      border: solid 1px transparent;
-      cursor: pointer;
-      
-      &:hover {
-        background-color: rgba(255, 99, 71, 0.867);
-        color: #fff;
-        font-weight: 600;
-        border: solid 1px #fff;
-        padding: 0.75rem 1.5rem;
-        transition: all 0.3s;
+    //&__btnResume {
+    //  color: white;
+    //  font-weight: 500;
+    //  background-color: rgb(232, 80, 54);
+    //  border: none;
+    //  padding: 0.75rem 1rem;
+    //  margin-left: 0.75rem;
+    //  border-radius: 6px;
+    //  transition: all 0.4s;
+    //  border: solid 1px transparent;
+    //  cursor: pointer;
+    //
+    //  &:hover {
+    //    background-color: rgba(255, 99, 71, 0.867);
+    //    color: #fff;
+    //    font-weight: 600;
+    //    border: solid 1px #fff;
+    //    padding: 0.75rem 1.5rem;
+    //    transition: all 0.3s;
+    //
+    //    .header__menuList__cv-idiomas {
+    //      display: block;
+    //    }
+    //
+    //  }
+    //}
+
+    &__idiomas{
+      transition: all 1s;
+      li {
+        list-style: none;
+        position: relative;
+        transition: all 1s;
+        padding: 15px 0;
+
+        &:hover {
+          ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 1s;
+            padding: 20px 0 0;
+          }
+        }
+
+        .btnResume {
+          color: white;
+          font-weight: 500;
+          background-color: rgb(232, 80, 54);
+          border: none;
+          padding: 0.4rem 1rem;
+          margin-left: 0.75rem;
+          border-radius: 6px;
+          transition: all 1s;
+          border: solid 1px transparent;
+          cursor: pointer;
+          position: relative;
+
+          &:hover {
+            background-color: rgba(255, 99, 71, 0.867);
+            color: #fff;
+            font-weight: 600;
+            border: solid 1px #fff;
+            transition: all 0.3s;
+
+            ul {
+              display: flex;
+              transition: all 0.6s;
+            }
+          }
+        }
       }
+
+        /* sub-menu*/
+        &__curriculo {
+          position: absolute;
+          top: 40px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: transparent;
+          display: none;
+          transition: all 1s;
+
+          //&::before{
+          //  content: '';
+          //  width: 0;
+          //  height: 0;
+          //  position: absolute;
+          //  top: -14px;
+          //  display: inline-block;
+          //  border-left: 10px solid transparent;
+          //  border-right: 10px solid transparent;
+          //  border-top: 15px solid #46CE75;
+          //  transition: all 1s;
+          //}
+
+          li {
+            list-style: none;
+          }
+
+          a {
+            text-decoration: none;
+            background-color: orangered;
+            color: #fff;
+            font-weight: 600;
+            padding: 5px 10px;
+            display: flex;
+            transition: all 0.6s;
+            border-radius: 4px;
+            margin: 0 5px;
+            transition: all 0.6s;
+
+            &:hover {
+              background-color: #6776b2;
+              color: #fff;
+              font-weight: 600;
+              transition: all 0.6s;
+            }
+          }
+        }
+
+
+      /* end sub-menu*/
     }
   }
 }
@@ -92,6 +196,9 @@
   .header__menuList{
     a {
       color: #fff;
+      &:hover {
+        color: tomato;
+      }
     }
   }
 
