@@ -45,3 +45,21 @@
 //
 //   });
 // });
+
+let iconButtonMenu = document.querySelector('.header .header__menu-mobile');
+let menuMobile = document.querySelector('.header .header__menuList');
+let iconCloseMobile = document.querySelector('.header .header__icon-closeMobile');
+
+    iconButtonMenu.addEventListener('click', (event) => {
+        event.preventDefault();
+        menuMobile.classList.add('ativar-menu');
+        event.currentTarget.style.display = 'none';
+        iconCloseMobile.style.display = 'flex';
+    });
+
+    iconCloseMobile.addEventListener('click', (event) => {
+        event.currentTarget.style.display = 'none';
+        iconButtonMenu.style.display = 'block';
+        menuMobile.classList.remove('ativar-menu');
+    })
+

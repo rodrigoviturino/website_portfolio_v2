@@ -9,5 +9,5 @@ initScrollSuave();
 headerAlterBackground();
 workTabList();
 buttonLoadMore();
-listarGithub();
 github();
+listarGithub();
