@@ -83,7 +83,9 @@ a {
   right: 0;
   z-index: 10;
   transition: all 1s;
-  background-color: #ccd6f6; }
+  background-color: #ccd6f6;
+  /** menu mobile **/
+  /** end menu mobile **/ }
   .header__logo {
     color: #0A192F;
     font-weight: 700;
@@ -94,17 +96,59 @@ a {
       width: 45px;
       height: 45px;
       margin-right: 8px; }
-  .header__menu-mobile {
+  .header #btn-mobile {
     display: none; }
-    @media screen and (max-width: 480px) {
-      .header__menu-mobile {
-        display: block; } }
-    @media (min-width: 481px) and (max-width: 767.98px) {
-      .header__menu-mobile {
-        display: block; } }
-    @media screen and (min-width: 768px) {
-      .header__menu-mobile {
-        display: none; } }
+  @media (max-width: 767px) {
+    .header .header__menuList {
+      flex-direction: column;
+      position: absolute;
+      width: 100%;
+      height: 0;
+      top: 3.5rem;
+      right: 0;
+      background-color: #2a2c47;
+      z-index: 100;
+      visibility: hidden;
+      overflow-y: hidden; }
+    .header nav.active .header__menuList {
+      height: calc(56vh - 3.5rem);
+      display: block;
+      visibility: visible; }
+    .header #btn-mobile {
+      display: flex;
+      padding: .5rem 1rem;
+      font-size: 1rem;
+      border: solid 2px #0A192F;
+      background-color: transparent;
+      cursor: pointer;
+      gap: .5rem; }
+      .header #btn-mobile #hamburger {
+        width: 20px;
+        border-top: 2px solid; }
+        .header #btn-mobile #hamburger::before {
+          content: '';
+          display: block;
+          width: 20px;
+          height: 2px;
+          background-color: currentColor;
+          margin-top: 5px;
+          transition: .5s; }
+        .header #btn-mobile #hamburger::after {
+          content: '';
+          display: block;
+          width: 20px;
+          height: 2px;
+          margin-top: 5px;
+          background-color: currentColor;
+          transition: .5s;
+          position: relative; }
+    .header .header nav.active #hamburger {
+      border-top-color: transparent; }
+      .header .header nav.active #hamburger::before {
+        transform: rotate(135deg); }
+      .header .header nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px; } }
   .header__icon-closeMobile {
     display: none; }
   .header__menuList {
@@ -130,10 +174,14 @@ a {
         padding: 0.75rem;
         color: #0A192F;
         font-weight: 700; }
+        @media screen and (max-width: 767.98px) {
+          .header__menuList__items a {
+            color: #fff; } }
         .header__menuList__items a:hover {
           color: rgba(220, 99, 47, 0.93); }
     .header__menuList__idiomas {
       transition: all 1s;
+      text-align: center;
       /* sub-menu*/
       /* end sub-menu*/ }
       .header__menuList__idiomas li {
@@ -197,14 +245,23 @@ a {
             transition: all 0.6s; }
 
 .nav-colored {
-  background-color: #2a2c47;
+  background-color: #6776b2;
   transition: all 1s; }
   .nav-colored a {
     color: #fff; }
-  .nav-colored .header__menuList a {
+  .nav-colored #btn-mobile {
+    border-color: #0A192F;
+    background-color: #2a2c47;
     color: #fff; }
-    .nav-colored .header__menuList a:hover {
-      color: tomato; }
+  .nav-colored .header__menuList {
+    transition: all .6s; }
+    @media screen and (max-width: 767.98px) {
+      .nav-colored .header__menuList {
+        background-color: #2a2c47; } }
+    .nav-colored .header__menuList a {
+      color: #fff; }
+      .nav-colored .header__menuList a:hover {
+        color: tomato; }
 
 .nav-transparent {
   background-color: rgba(42, 44, 71, 0.44);
@@ -254,7 +311,7 @@ a {
       .main__homeIntro__descriptions p:first-child {
         color: tomato;
         font-weight: 400;
-        font-size: 1rem;
+        font-size: 1.1rem;
         margin-bottom: 0.85rem; }
         @media screen and (min-width: 1200px) {
           .main__homeIntro__descriptions p:first-child {
@@ -275,7 +332,7 @@ a {
         margin: 0 0 1.125rem 0; }
       .main__homeIntro__descriptions p:nth-child(4) {
         color: #8892b0;
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 400;
         line-height: 1.625rem;
         max-width: 33.75rem; }
@@ -1035,14 +1092,16 @@ a {
         border-color: tomato;
         padding: 0.7rem 2.5rem; }
   .main__form {
-    max-width: 20rem;
+    max-width: 30rem;
     text-align: center;
     color: #ccd6f6;
     padding: 3.25rem 0 0;
-    margin: 0 auto 2rem; }
+    margin: 0 auto 2rem;
+    /* Formulario */
+    /* end Formulario */ }
     @media screen and (min-width: 1200px) {
       .main__form {
-        max-width: 37rem;
+        max-width: 30rem;
         padding: 6.25rem 0 3rem;
         margin: 0 auto 6.25rem; } }
     .main__form .title {
@@ -1072,6 +1131,14 @@ a {
         .main__form .resume {
           font-size: 1.1rem;
           margin-bottom: 2rem; } }
+    .main__form form .coluna-2 {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center; }
+      .main__form form .coluna-2 div {
+        display: flex;
+        flex-direction: column;
+        align-items: start; }
     .main__form a {
       display: inline-block;
       background-color: transparent;

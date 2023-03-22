@@ -38,7 +38,7 @@
       p:first-child {
         color: tomato;
         font-weight: 400;
-        font-size: 1rem;
+        font-size: 1.1rem;
         margin-bottom: 0.85rem;
         
         @media screen and (min-width: 1200px){
@@ -67,7 +67,7 @@
 
       p:nth-child(4) {
         color: #8892b0;
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 400;
         line-height: 1.625rem;
         max-width: 33.75rem;
@@ -437,7 +437,6 @@
     }
   }
 
-  
   .mute {
     display: none;
   }
@@ -1144,14 +1143,15 @@
   }
 
   &__form {
-    max-width: 20rem;
+    // max-width: 20rem;
+    max-width: 30rem;
     text-align: center;
     color: #ccd6f6;
     padding: 3.25rem 0 0;
     margin: 0 auto 2rem;
     
     @media screen and (min-width: 1200px){
-      max-width: 37rem;
+      max-width: 30rem;
       padding: 6.25rem 0 3rem;
       margin: 0 auto 6.25rem;
     }
@@ -1191,6 +1191,24 @@
         margin-bottom: 2rem;
       }
     }
+
+
+
+    /* Formulario */
+    form {
+      .coluna-2 {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+        }
+      }
+    }
+    /* end Formulario */
 
     a {
       display: inline-block;

@@ -18,7 +18,7 @@ let listCard = document.querySelector('.main__repository .repository__list');
 
             data.filter( (item) => {
                 // if(item.name == listinha){
-                console.log(item.name)
+                // console.log(item.name)
                 if(
                     item.name == 'bootstrap3' ||
                     item.name == 'bootstrap4' ||

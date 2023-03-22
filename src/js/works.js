@@ -1,7 +1,7 @@
 /* Section - Tab List */
-function workTabList() {
+export default function workTabList() {
 
-    let tabList = document.querySelectorAll('.main__worked ul li');
+    let tabList = document.querySelectorAll('.main__worked .company li');
     let tabContent = document.querySelectorAll('.tabContent div');
 
     if (tabContent.length && tabList.length) {
@@ -14,7 +14,6 @@ function workTabList() {
             })
             tabContent[index].classList.add('active');
         }
-
     }
 
     tabList.forEach((tabItem, tabIndex) => {
@@ -23,7 +22,5 @@ function workTabList() {
         });
     });
 }
-
-export default workTabList;
 
 /*** end Section - Tab List */
