@@ -75,9 +75,9 @@
 
       a{
         margin-top: 3.125rem;
-        color: white;
+        color: #0A192F;
         font-weight: 600;
-        background-color: tomato;
+        background-color: #FF8052;
         border: solid 1px #fff;
         padding: 1.3rem 1.3rem;
         border-radius: 0.25rem;
@@ -539,6 +539,8 @@
 
           img {
             border-radius: 8px;
+            width: 580px;
+            height: 363px;
 
             @media screen and (max-width: 480px){
               border-top-left-radius: 8px;
@@ -794,6 +796,8 @@
 
           img {
             border-radius: 8px;
+            width: 580px;
+            height: 363px;
 
             @media screen and (max-width: 480px){
               border-bottom-left-radius: 0px;
@@ -986,8 +990,8 @@
       align-items: center;
       justify-content: center;
 
-      color: white;
-      background-color: tomato;
+      color: #0A192F;
+      background-color: #FF8052;
       border: solid 1px #fff;
       padding: 0.7rem 1.75rem;
       border-radius: 0.25rem;
@@ -1117,9 +1121,9 @@
 
     &__btnShowMore {
       display: inline-block;
-      color: #fff;
-      background-color: tomato;
-      border: solid 1px #fff;
+      color: #0A192F;
+      background-color: #FF8052;
+      border: solid 1px #0A192F;
       padding: 0.7rem 1.75rem;
       border-radius: 0.25rem;
       font-size: 1rem;
@@ -1187,7 +1191,7 @@
       margin-bottom: 1.3rem;
 
       @media screen and (min-width: 1200px){
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         margin-bottom: 2rem;
       }
     }
@@ -1196,15 +1200,87 @@
 
     /* Formulario */
     form {
-      .coluna-2 {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
 
-        div {
-          display: flex;
-          flex-direction: column;
-          align-items: start;
+      label {
+        display: block;
+        text-align: left;
+        margin-bottom: 0.3rem;
+        font-size: 1.125rem;
+      }
+
+      input {
+        width: 100%;
+        background-color: transparent;
+        border: solid 2px tomato;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        color: #fff;
+        font-size: 1.125rem;
+        border-radius: 6px;
+        font-weight: 500;
+
+        &:focus{
+          background-color: rgb(240, 80, 52);
+          outline: tomato;
+        }
+      }
+
+      select {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+        color: #FF8052;
+        border: solid 2px tomato;
+        border-radius: 6px;
+        background-color: transparent;
+        font-weight: 600;
+        margin-bottom: 1rem;
+
+        option {
+          background-color: #0A192F;
+          color: #fff;
+          font-size: 1.125rem;
+          font-weight: 500;
+          border-radius: 6px;
+        }
+      }
+
+      textarea {
+        width: 100%;
+        border: solid 2px tomato;
+        border-radius: 6px;
+        background-color: transparent;
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding: 1rem;
+        letter-spacing: 1.2px;
+        height: 120px;
+
+        &:focus {
+          background-color: #77819e;
+        }
+      }
+
+      button {
+        display: inline-block;
+        background-color: tomato;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #fff;
+        border: solid 2px #a8b2d1;
+        border-radius: 6px;
+        padding: 0.8rem 1.75rem;
+        transition: all 0.6s;
+        margin-top: 1rem;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: transparent;
+          color: tomato;
+          border-color: tomato;
+          padding: 1.125rem 3rem;
+          transition: all 0.6s;
         }
       }
     }
@@ -1219,6 +1295,7 @@
       border-radius: 6px;
       padding: 1.125rem 1.75rem;
       transition: all 0.6s;
+      margin-top: 1rem;
 
       &:hover {
         background-color: tomato;
@@ -1233,6 +1310,12 @@
     text-align: center;
     color: #8892b0;
     padding: 1.5rem 0;
+
+    .colorContrast {
+      color: tomato;
+      font-weight: 500;
+      font-size: 1.125rem;
+    }
   }
 
 }

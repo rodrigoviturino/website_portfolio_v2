@@ -1,5 +1,5 @@
 /*** API GITHUB PAGE REPOSITORY ***/
-function listarGithub(){
+export default function listarGithub(){
 
     let listRepository = document.querySelector('.main-repository__listRepository table tbody');
 
@@ -32,6 +32,4 @@ function listarGithub(){
         .catch((error) => console.log(error))
 
 }
-
-export default listarGithub;
 /*** end API GITHUB PAGE REPOSITORY ***/

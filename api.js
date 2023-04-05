@@ -57,5 +57,3 @@ let listCard = document.querySelector('.main__repository .repository__list');
         }).catch( e => console.log(e))
 
 }
-
-github();
